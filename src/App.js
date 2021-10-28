@@ -1,27 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {TaskItem} from "./TaskItem";
 
 function App() {
   return (
-    <main>
+    <main> 
         <form>
           <input type="text" placeholder="Task name"/>
           <button>Create Task</button>
         </form>
 
-        <ul> 
-          <li>
-            <input type="checkbox" />
-            <span>Learn React</span>
-          </li>
-          <li>
-            <input type="checkbox" />
-            <span>Learn Hooks</span>
-          </li>
-          <li>
-            <input type="checkbox" />
-            <span>Keep on Keeping on</span>
-          </li>
+        <ul>  
+          <TaskItem isChecked={true} taskName="Learn React" />
+          <TaskItem isChecked={false} taskName="Learn Hooks" />
+          <TaskItem isChecked={false} taskName="Keep on Keeping on" />
         </ul>
 
     </main>
