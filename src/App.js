@@ -2,7 +2,12 @@
 import './App.css';
 import {TaskItem} from "./TaskItem";
 
-function App() {
+function App() { 
+
+  const handleTaskChange = () =>{
+    console.log("changed!");
+  };
+
   return (
     <main> 
         <form>
@@ -11,9 +16,9 @@ function App() {
         </form>
 
         <ul>  
-          <TaskItem isChecked={true} taskName="Learn React" />
-          <TaskItem isChecked={false} taskName="Learn Hooks" />
-          <TaskItem isChecked={false} taskName="Keep on Keeping on" />
+          <TaskItem isChecked={true} taskName="Learn React" onTaskChange={handleTaskChange} />
+          <TaskItem isChecked={false} taskName="Learn Hooks" onTaskChange={handleTaskChange} />
+          <TaskItem isChecked={false} taskName="Keep on Keeping on" onTaskChange={handleTaskChange}/>
         </ul>
 
     </main>
